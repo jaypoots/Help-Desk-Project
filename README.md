@@ -5,6 +5,8 @@
 Goal:
 > To provision a windows server on Azure and utilize ticketing software to then simulate someone forgetting their password and perform a password reset.
 
+---
+
 Steps Taken:
 - Provisioned a Windows VM: 'VM01' on Microsoft Azure.
 -   Configured the virtual machine with:
