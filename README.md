@@ -28,4 +28,13 @@ In this phase, I deployed a Windows Server 2022 instance in Azure and configured
 Followed the Principle of Least Privilege and secured the systems sensitive data.
 
 - New File Technology System(NTFS) Permission Configuration: Modified Access Control Lists (ACLs) to set the `ost-config.php` file to 'Read-Only' after osTicket was installed so their won't be risks of unauthorized configuration changes.
-    - Screenshot:  ![Image](images/Least_Privilege_Configurations.PNG)
+    - Screenshot: ![Image](images/Least_Privilege_Configurations.PNG)
+
+## Phase 3: Identity Federation (Integrated LDAP)
+
+To centralize authentication, I established a 'handshake' between the web application and the Domain Controller.
+
+- LDAP Configuration: Implemented a Bind DN(Distinguished Name) using a dedicated service account to allow osTicket to query the helpdesk.lab directory.
+- Federation Successfully Enabled: LDAP plugin was active and successfully commujnicated with the Domain Controller.
+    - Screenshot: ![Image](images/plugin_enabled.PNG)
+ 
