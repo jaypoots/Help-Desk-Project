@@ -1,19 +1,25 @@
-# Help-Desk-Project
+# Help Desk Ticketing System & Identity Management Lab
 
-## This project is done to showcase help desk related skills.
 
-Goal:
-> To provision a windows server on Azure and utilize ticketing software to then simulate someone forgetting their password and perform a password reset.
+### Role: Help Desk Administrator | Identity and Access Management Analyst
+### Environment/Tools: Microsoft Azure, Windows Server 2022, Internet Information Services (IIS), MySQL, osTicket
 
 ---
 
-Steps Taken:
-- Provisioned a Windows VM: `VM01` on Microsoft Azure.
--   Configured the virtual machine with:
-    -   Operating System: Windows
-    -   Size: Standard D2s v3 (2 vcpus, 8 GiB memory)
-    -   Location: East US 2
-    -   Availability Zone: 2
+## Overview
 
-- Connected to `VM01` via Remote Desktop Protocol.
-- 
+This project demonstrates the full deployment of a Microsoft Azure Windows Virtual Machine and the deployment of a centralized ticketing system integrated with **Active Directory (AD)** via **LDAP**. Showcases the complete lifecycle of a user identity, from provisioning and security hardening to incident remediation. In this specific project it was to demonstrate a account lockout and how to remediate it(password reset) from a IAM/Help desk perspective.
+
+---
+
+## Phase 1: Infrastructure & Provisioning
+
+In this phase, I deployed a Windows Server 2022 instance in Azure and configured the web environment.
+
+- Identity Infrastructure: Deployed and promoted a Windows Server VM to a Domain Controller, thus establishing the Active Directory forest (`helpdesk.lab`) and configured core Directory Services.
+- Web & Database Tier: Provisioned a MySQL database(`osticket_db`) to store tickets and optimized the IIS/PHP environment for application hosting.
+    - Screenshot: ![Image](images/CREATEDATABASE.PNG)
+
+- Application Deployment: Successfully installed osTicket.
+    - Screenshot: ![Image](images/osticketinstalled.PNG)
+ 
