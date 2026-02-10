@@ -16,7 +16,7 @@ This project demonstrates the full deployment of a Microsoft Azure Windows Virtu
 
 In this phase, I deployed a Windows Server 2022 instance in Azure and configured the web environment.
 
-- Identity Infrastructure: Deployed and promoted a Windows Server VM to a Domain Controller, thus establishing the Active Directory forest (`helpdesk.lab`) and configured core Directory Services.
+- Identity Infrastructure: Deployed and promoted a Windows Server VM (`VM01`) to a Domain Controller, thus establishing the Active Directory forest (`helpdesk.lab`) and configured core Directory Services.
 - Web & Database Tier: Provisioned a MySQL database(`osticket_db`) to store tickets and downloaded and optimized the IIS/PHP environment for application hosting.
     - Screenshot: ![Image](images/CREATEDATABASE.PNG)
 
